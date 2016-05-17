@@ -1,6 +1,8 @@
 # Flask Filter App
 
-# Homework due Monday, May 16
+# Homework due Monday, May 16:
+
+![img](http://i.imgur.com/GbZt9r2.png?1)
 
 *Describe the two (or more, if you choose) views of your app:*
 
@@ -10,9 +12,11 @@ Data here:[http://wildlife.faa.gov/database.aspx](http://wildlife.faa.gov/databa
 
 The homepage will have a brief explainer followed by the filter options (explained below). The results page will show the filtered, sorted subset of data.
 
+
 *Describe the filter options you will make available to the user.*
 
 Users can filter by carrier (i.e. "United", "Delta", "British Airways") or by species of bird hit.
+
 
 *List three actual live data applications (such as ones produced by the government, or by news sites) that inspired you.*
 
