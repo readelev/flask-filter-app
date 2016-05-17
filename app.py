@@ -22,14 +22,14 @@ def results():
             <p>Go <a href="{url}">back</a></p>
         """.format(url=request.referrer)
 
-    elif requests.args.get('airline'):
+    elif request.args.get('airline'):
         search_type = 'airline'
         search_val = request.args.get('airline')
-        kills = splat_splat(species=search_val, sortby=_sortby)
-    elif requests.args.get('species'):
+        kills = get_data(species=search_val, sortby=_sortby)
+    elif request.args.get('species'):
         search_type = 'species'
-        search_val = requests.args.get('species')
-        kills = splat_splat(species=search_val, sortby=_sortby)
+        search_val = request.args.get('species')
+        kills = get_data(species=search_val, sortby=_sortby)
 
     html = render_template('results.html', incidents=kills, sortby=_sortby, 
         search_type=search_type, search_val=search_val)
