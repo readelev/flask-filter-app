@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    	<title>Deaths During the LA Riots</title>
+        
+        <link rel="stylesheet" href="/static/css/mystyles.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+   		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    </head>
+    <body>
+
+    <header class="whelp">
+    	<div class="container">
+    	  <h1 class="site-title">The Deaths during the Los Angeles Riots</h1>
+    	</div>
+    </header>
+
+    <section class="sec content whelp">
+      <div class="container">
+<p></p>
+<h1><b>{{ object.full_name }}</b></h1>
+<p class = "story">{{ object.story }}.</p>
+
+<p><a href="http://articles.latimes.com/print/1992-06-21/news/mn-1558_1_police-officer">Read the story at the Los Angeles Times</a></p>
+    	
+<div class="row">
+	<div class="col-sm-6">
+        
+		<div class="map">
+      		<img class='img-fluid' src="https://maps.googleapis.com/maps/api/staticmap?markers=34.0592814%2C-118.2739756&amp;zoom=12&amp;size=700x400" alt="">
+    	</div>
+
+  </div>
+  <div class="col-sm-6">
+    <div class="streetview">
+      <img  class='img-fluid' src="https://maps.googleapis.com/maps/api/streetview?location=34.0592814%2C-118.2739756&amp;size=700x400" alt="">
+    </div>
+
+  </div>
+</div>
+
+  </div>
+  </section>
+
+  <footer class="woz">
+    <div class="container">
+    <p>Data and structure comes from the <a href="http://first-news-app.readthedocs.io/en/latest/">First News App tutorial</a></p>
+    </div>
+
+  </footer>
+
+    </body>
+</html>
