@@ -1,11 +1,11 @@
 import csv
-from flask import Flask, abort, render_template, request
+from flask import Flask, render_template, request
 from foo import get_data
 app = Flask(__name__)
 
 @app.route("/")
 def homepage():
-    html = render_template('index.html')
+    html = render_template('homepage.html')
     return html
 
 @app.route("/results")
@@ -31,7 +31,7 @@ def results():
         search_val = requests.args.get('species')
         kills = splat_splat(species=search_val, sortby=_sortby)
 
-    html = render_template('results.html', kills=XX, sortby=_sortby, 
+    html = render_template('results.html', incidents=kills, sortby=_sortby, 
         search_type=search_type, search_val=search_val)
 
     return html

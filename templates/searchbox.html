@@ -1,9 +1,10 @@
  <form action="{{url_for('results')}}" method="get">
 
         <strong>Sort by:</strong>
-        <input type="radio" name="sortby" value="alpha" checked>Alphabetical by species
+        
         <input type="radio" name="sortby" value="oldest">Oldest
-        <input type="radio" name="sortby" value="youngest">Newest
+        <input type="radio" name="sortby" value="newest">Newest
+        <input type="radio" name="sortby" value="alpha" checked>Alphabetical (by species)
 
         <br>
         <p>Search by airline </p>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>Clever title here</title>
+        
+        <link rel="stylesheet" href="/static/css/mystyles.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+   		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    </head>
+    <body>
+
+    <header class="whelp">
+    	<div class="container">
+    	  <h1 class="site-title">Search for an incident:</h1>
+            {% include 'searchbox.html' %}
+    	</div>
+    </header>
+
+    <section class="sec content whelp">
+      <div class="container">
+
+    <p class="summary">This is a database of all bird run-ins with aircrafts at SFO. Read more at the <a href="http://spreadsheets.latimes.com/la-riots-deaths/">Los Angeles Times</a></p>
+
+	<div id="map"></div>
+	
+    <table class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>State</th>
+            <th>Airport</th>
+            <th>Airline</th>
+            <th>Species</th>
+            <th>Damage</th>
+        </tr>
+    </thead>
+    <tbody>
+            {% for obj in object_list %}
+        <tr>
+            <td><{{ obj.date }}</td>
+            <td>{{ obj.state }}</td>
+            <td>{{ obj.airport }}</td>
+            <td>{{ obj.airline }}</td>
+            <td>{{ obj.species }}</td>
+            <td>{{ obj.damage }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    <p>Data comes from <a href="http://wildlife.faa.gov/database.aspx">the Federal Aviation Administration</a></p>
+
+</body>
+</html>

@@ -1,33 +1,33 @@
 body{
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 3.0em;
-  border: thin solid purple;
-  font-size: 20px;
-  font-family: 'Comic Sans MS', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  font face:"helvetica";
+}
+
+.summary{
+  font-size: 1.4em;
+  font-style: italic;
+}
+
+#map{
+  width: 100%;
+  height: 400px;
+}
+
+header.whelp, .sec{
+  margin-bottom: 2.0em;
+}
+
+header.whelp{
+  background: black;
+  color: white;
+  padding: 0.5em 0 1.0em;
 }
 
 
-input{
-  border: 2px solid green;
-}
-
-h2{
-  color: hotpink;
-}
-
-
-table{
-  font-size: 14px;
-}
-
-
-input.submit-button{
-  width: 250px;
-  font-size: 25px;
-  background: white;
-  cursor: pointer;
-  border: thick solid green;
-  margin: 2.0em;
-
+footer.whelp{
+  margin-top: 2.0em;
+  min-height: 280px;
+  padding: 1.5em 0;
+  background: black;
+  color: white;
 }

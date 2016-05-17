@@ -5,11 +5,11 @@ from helpers import filter_by_airline, filter_by_species, sort_by_criteria
 incidents = get_data()
 
 # this function is the only one that app.py needs to know about
-def get_data(species="", airportcode="", sortby="alpha"):
+def get_data(species="", airline="", sortby="alpha"):
     matched_rows = []
     datarows = incidents
     # first, filter
-    if airportcode:
+    if airline:
         filteredrows = filter_by_airline(airline, incidents)
     else:
         # by default, search by species

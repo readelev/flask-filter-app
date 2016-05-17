@@ -4,17 +4,23 @@
 
 *Describe the two (or more, if you choose) views of your app:*
 
-My app will explore the FAA Wildlife Strike data for SFO. The homepage will have a brief explainer followed by the filter options (explained below) above a brief preview of the data (10-20 first few rows).
+My app will explore the FAA Wildlife Strike data for SFO. The full database is a .AACDB file, which I've been unable to convert. So, for the purposes of this assignment, I've downloaded a .CSV with strike data for SFO only. 
 
-The details page will show the filtered, sorted subset of data.
+Data here:[http://wildlife.faa.gov/database.aspx](http://wildlife.faa.gov/database.aspx).
+
+The homepage will have a brief explainer followed by the filter options (explained below). The results page will show the filtered, sorted subset of data.
 
 *Describe the filter options you will make available to the user.*
 
-Users can filter by airline or species.
+Users can filter by carrier (i.e. "United", "Delta", "British Airways") or by species of bird hit.
 
 *List three actual live data applications (such as ones produced by the government, or by news sites) that inspired you.*
 
-# Data [here](http://wildlife.faa.gov/database.aspx).
+1. BBC's [Every death on every road in Great Britain 1999-2010](http://www.bbc.com/news/uk-15975720)
+2. Propublica's [Surgeon Scorecard](https://projects.propublica.org/surgeons/)
+3. Chicago Tribune's search for [Officer Involved Shootings](http://apps.chicagotribune.com/news/local/ipra/)
+
+
 
 
 
