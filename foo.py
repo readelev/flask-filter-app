@@ -20,4 +20,4 @@ def get_data(species="", airline="", sortby="alpha"):
 
 
 def print_record_count():
-    print("There are", len(incidents), 'rows.')
+    print("There are", len(incidents), "rows.")

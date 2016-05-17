@@ -16,7 +16,7 @@ def filter_by_airline(airline, datarows):
     for c in datarows:
         # find all incidents
         # that match given z['airline']
-        if airline == c['operator']:
+        if airline.upper() == c['operator']:
             matches.append(c)
     return matches
 
@@ -24,9 +24,9 @@ def filter_by_airline(airline, datarows):
 def filter_by_species(species, datarows):
     matches = []
     for c in datarows:
-         # find all incidents
+        # find all incidents
         # that match given z['species']
-        if species == c['species']:
+        if species.upper() == c['species'].upper():
              matches.append(c)
     return matches
 
@@ -38,6 +38,6 @@ def sort_by_criteria(criteria, datarows):
         rows = sorted(datarows, key=itemgetter('incident_date'))
     else:
        # i.e. 'youngest' or any value...just sort by most recent
-        rows = sorted(datarows, key=itemgetter('incident_date'))
+        rows = sorted(datarows, key=itemgetter('incident_date'), reverse=True)
         
     return rows

@@ -25,7 +25,7 @@ def results():
     elif request.args.get('airline'):
         search_type = 'airline'
         search_val = request.args.get('airline')
-        kills = get_data(species=search_val, sortby=_sortby)
+        kills = get_data(airline=search_val, sortby=_sortby)
     elif request.args.get('species'):
         search_type = 'species'
         search_val = request.args.get('species')
