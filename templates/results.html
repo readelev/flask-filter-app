@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search results</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+
+  <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
+
+
+  <p>These are the incidents of
+      {{search_type}} of {{search_value}}
+  </p>
+  <p>Results sorted by <strong>{{sortby}}</strong></p>
+
+  <table>
+    <tbody>
+      {% for p in incidents %}
+        <tr>
+          <td>{{p.incident_date}}</td>
+          <td>{{p.airport}}</td>
+          <td>{{p.operator}}</td>
+          <td>{{species}}</td>
+
+          <td>{{p.damage}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+</body>
+</html>

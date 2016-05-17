@@ -1,10 +1,33 @@
 body{
-  width: 85%;
-  margin: auto;
-  font-family: "Helvetica Neue";
-  background: #FFFFFF;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 3.0em;
+  border: thin solid purple;
+  font-size: 20px;
+  font-family: 'Comic Sans MS', 'Helvetica Neue', Arial, sans-serif;
 }
 
-img.legislator{
-	outline #000000
+
+input{
+  border: 2px solid green;
+}
+
+h2{
+  color: hotpink;
+}
+
+
+table{
+  font-size: 14px;
+}
+
+
+input.submit-button{
+  width: 250px;
+  font-size: 25px;
+  background: white;
+  cursor: pointer;
+  border: thick solid green;
+  margin: 2.0em;
+
 }
