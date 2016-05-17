@@ -2,11 +2,11 @@
 
 # Homework due Monday, May 16:
 
-![img](http://i.imgur.com/GbZt9r2.png?1)
-
 *Describe the two (or more, if you choose) views of your app:*
 
 My app will explore the FAA Wildlife Strike data for SFO. The full database is a .AACDB file, which I've been unable to convert. So, for the purposes of this assignment, I've downloaded a .CSV with strike data for SFO only. 
+
+![img](http://i.imgur.com/GbZt9r2.png?1)
 
 Data here:[http://wildlife.faa.gov/database.aspx](http://wildlife.faa.gov/database.aspx).
 
