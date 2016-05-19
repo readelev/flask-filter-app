@@ -9,7 +9,7 @@ body{
 }
 
 #map{
-  width: 100%;
+  max-width: 100%;
   height: 400px;
 }
 
@@ -30,4 +30,8 @@ footer.whelp{
   padding: 1.5em 0;
   background: black;
   color: white;
+}
+
+.wiki_photo{
+  max-width: 300px;
 }

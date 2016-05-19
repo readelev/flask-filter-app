@@ -1,6 +1,7 @@
 import csv
+from foo import go_incidents
+from helpers import get_wiki_photo
 from flask import Flask, render_template, request
-from foo import get_data
 app = Flask(__name__)
 
 @app.route("/")
@@ -14,6 +15,8 @@ def results():
     _sortby = reqargs.get('sortby')
     _airline = reqargs.get('airline')
     _species = reqargs.get('species')
+    _airport = "SFO"
+    #_airport = reqargs.get('airport')
 
     if not _airline and not _species:
         return """
@@ -25,14 +28,23 @@ def results():
     elif request.args.get('airline'):
         search_type = 'airline'
         search_val = request.args.get('airline')
-        kills = get_data(airline=search_val, sortby=_sortby)
+        photo_url = get_wiki_photo(search_val)
+        kills = go_incidents(airline=search_val, sortby=_sortby)
+    
     elif request.args.get('species'):
         search_type = 'species'
         search_val = request.args.get('species')
-        kills = get_data(species=search_val, sortby=_sortby)
+        photo_url = get_wiki_photo(search_val)
+        kills = go_incidents(species=search_val, sortby=_sortby)
+
+    elif request.args.get('airport'):
+        search_type = 'airport'
+        search_val = request.values.get('airport')
+        photo_url = get_wiki_photo(search_val)
+        kills = go_incidents(airport=search_val, sortby=_sortby)
 
     html = render_template('results.html', incidents=kills, sortby=_sortby, 
-        search_type=search_type, search_val=search_val)
+        search_type=search_type, search_val=search_val, photo_url=photo_url)
 
     return html
 

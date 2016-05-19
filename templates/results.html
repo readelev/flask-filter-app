@@ -3,33 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Search results</title>
+  
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+
   <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body>
+  <div class="container">
 
-  <p>Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
+      <p><strong><<<</strong> Go back to <a href="{{url_for('homepage')}}">homepage</a></p>
+    
+    <div class="row">
+      <div class="col-sm-6">
+         <div class="wiki_photo">
+              <img src="{{photo_url}}" alt="picture" class="wiki_photo">
+         </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="map">
+            <img class='img-fluid' src="https://maps.googleapis.com/maps/api/staticmap?markers=34.0592814%2C-118.2739756&amp;zoom=12&amp;size=700x400" alt="">
+        </div>
+      </div>
+    </div>
 
+      <p>These are all the incidents of carriers colliding with birds <strong>since 1985</strong>.</p>
+      <p>Results sorted <strong>{{sortby}}:</strong></p>
 
-  <p>These are the incidents of
-      {{search_type}} of {{search_value}}
-  </p>
-  <p>Results sorted by <strong>{{sortby}}</strong></p>
+      <table class="table table-condensed table-bordered table-striped">
+       <thead>
+           <tr>
+               <th>Date</th>
+               <th>State</th>
+               <th>Airport</th>
+               <th>Airline</th>
+               <th>Species</th>
+               <th>Damage</th>
+           </tr>
+       </thead>
+       <tbody>
+          {% for p in incidents %}
+            <tr>
+              <td>{{p.incident_date}}</td>
+              <td>{{p.state}}</td>
+              <td>{{p.airport}}</td>
+              <td>{{p.operator}}</td>
+              <td>{{p.species}}</td>
+              <td>{{p.damage}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
 
-  <table>
-    <tbody>
-      {% for p in incidents %}
-        <tr>
-          <td>{{p.incident_date}}</td>
-          <td>{{p.airport}}</td>
-          <td>{{p.operator}}</td>
-          <td>{{p.species}}</td>
-
-          <td>{{p.damage}}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-
-  </table>
-
+      </table>
+    </div>
 </body>
 </html>
