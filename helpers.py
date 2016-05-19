@@ -3,7 +3,6 @@ import requests
 from operator import itemgetter
 
 DATA_FNAME = './static/data/wildlife.csv'
-CODES_FNAME = './static/data/codes.html'
 
 def get_data():
     # open data file
